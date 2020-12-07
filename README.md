@@ -4,7 +4,7 @@
 - PHP 7.3.0
 
 ### Installation
-1. git clone <this-repository-url>.git
+1. git clone https://github.com/thisham/link-shortener.git
 2. Edit the configurations in config/config.php
 
 ### Database

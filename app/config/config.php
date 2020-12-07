@@ -3,7 +3,7 @@
 function config() {
 	return array(
 		"database"	=> array(
-			"name"	=> "tes_data",
+			"name"	=> "lshort",
 			"user"	=> "root",
 			"pass"	=> "",
 			"host"	=> "localhost"
@@ -11,8 +11,8 @@ function config() {
 		"autoload"	=> array(
 			"models"	=> [],
 			"libraries"	=> ['database'],
-			"helpers"	=> ['url']
+			"helpers"	=> ['url', 'json_api']
 		),
-		"base_url"	=> "http://localhost/label/backend"
+		"base_url"	=> "http://localhost/project/lshort"
 	);
 }

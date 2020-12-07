@@ -2,10 +2,33 @@
 
 class home extends Controller
 {
+	private $url;
 
-	function index()
+	function __construct() {
+		$this->model('Model_url');
+		$this->url = new Model_url();
+	}
+
+	function index($url = null)
 	{
-		$this->view('web/index', ['as' => 'asdasd']);
+		if (is_null($url)) {
+			$this->page();
+		} else {
+			$redirect = $this->url->get($url);
+			redirectTo($redirect["target_url"]);
+		}
+	}
+
+	private function page()
+	{
+		$data = array(
+			"title"	=> "Shorten your URL's now!"
+		);
+
+		$this->view('web/header', $data);
+		$this->view('web/navbar');
+		$this->view('web/page');
+		$this->view('web/footer');
 	}
 
 	function index2()

@@ -8,7 +8,7 @@ function base_url($location = null)
 			break;
 		
 		default:
-			$url = config()["base_url"] . $location;
+			$url = config()["base_url"] . "/" . $location;
 			break;
 	}
 
@@ -18,4 +18,9 @@ function base_url($location = null)
 function redirect($location = null)
 {
 	echo '<script>window.location = "' . base_url($location) . '"</script>';
+}
+
+function redirectTo($location = null)
+{
+	echo '<script>window.location = "' . $location . '"</script>';
 }
